@@ -1,0 +1,41 @@
+<html lang="en">
+    {% extends 'base.html' %}
+    {% load static %}
+    <head>
+        {% block title %}
+            <title>{{collection.name}}</title>
+        {% endblock title %}
+    </head>
+
+    <body>
+        {% block collections_slider %}{% endblock %}
+        {% block content %}
+        <div class="featured-poems">
+            <div class="featured-poems-heading">
+                <h2>{{collection.name}}</h2>
+            </div>
+            <div class="poem-list-container">
+                {% if collection_poems %}
+                {% for poem in collection_poems %}
+                <div class="poem-card">
+                    <div class="poem-image">
+                        <img src="{{poem.featured_image.url}}" alt="">
+                    </div>
+                    <div class="poem-body">
+                        <a href="{{poem.get_absolute_url}}"><h3 class="poem-title">{{poem.title|title}}</h3></a>
+                        <p class="poem-date">{{poem.date_created}}</p>
+                        <div class="poem-body-container">
+                            <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:16}}</p>
+                        </div>
+                        <a href="{% url 'poem_castle:collection' poem.collection.slug %}"><p class="poem-collection">{{poem.collection}}</p></a>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endblock content %}
+        
+    </body>
+</html>

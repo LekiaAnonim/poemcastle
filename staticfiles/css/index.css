@@ -1,0 +1,109 @@
+
+
+
+body{
+    margin: 0;
+    overflow-y: hidden;
+    padding: 0;
+    background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.poem-landing-page-container{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(205, 205, 255); */
+    background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+.logo-text-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-text-container h1{
+    font-family: rubicdirt, sans-serif;
+    font-weight: 200;
+    color: blue;
+}
+.landing-page-card{
+    max-width: 400px;
+    width: 40%;
+    height: 90vh;
+    background-color: #ffffffb6;
+    /* margin-top: calc(50% - 97%); */
+    padding: 30px 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    /* margin-top: -60%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.landing-page-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+
+}
+.landing-page-image svg{
+    width: 60%;
+    height: 60%;
+    max-width: 400px;
+    min-width: 250px;
+}
+.poems-by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.poems-by h2{
+    font-family: parisienne, sans-serif;
+    color: rgb(59, 59, 59);
+    font-weight: 200;
+    
+}
+.short-poem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.short-poem p{
+    color: rgb(56, 56, 59);
+    font-size: 12px;
+    font-weight: 300;
+}
+.explore-poem-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.explore-poem-button button{
+    border: none;
+    background-color: blue;
+    color: #fff;
+    padding: 7px 10px;
+    width: 80%;
+    min-width: 200px;
+    cursor: pointer;
+    /* border-radius: 10px; */
+}
+canvas {
+    width: 100%;
+    height: 100vh;
+    /* margin-top: calc(50% - 50vh); */
+  }

@@ -1,0 +1,106 @@
+@font-face {
+    font-family: gothic;
+    src: url('/fonts/CenturyGothic.ttf');
+}
+.poem-detail-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.poem-detail-aside{
+    float: right;
+    width: 350px;
+
+    /* min-width: 300px; */
+    padding: 20px;
+    background-color: rgb(241, 241, 241);
+}
+.poem-detail-aside .aside-heading{
+    margin-bottom: 30px;
+}
+.poem-detail-aside .aside-heading h2{
+    color: #835EFF;
+    font-size: 14px;
+}
+.poem-detail-card{
+    width: 400px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.poem-detail-collection{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.poem-detail-collection a{
+    color: #835EFF;
+}
+.poem-detail-heading{
+    border-left: 5px #835EFF solid;
+    padding: 2px 10px;
+    height: 70px;
+    margin-top: 20px;
+    width: 400px;
+    min-width: 300px;
+}
+.poem-detail-heading h1{
+    color: #FF008D;
+}
+.poem-detail-stat{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 400px;
+    min-width: 300px;
+}
+.poem-detail-stat p{
+    color: gray;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.poem-detail-stat span{
+    color: rgb(41, 40, 40);
+    font-weight: 600;
+}
+.poem-detail-share{
+    margin-top: 15px;
+    width: 400px;
+    min-width: 300px;
+}
+.poem-detail-share svg{
+    fill: rgb(63, 63, 63);
+}
+.poem-detail-image{
+    width: 400px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.poem-detail-image img{
+    width: 100%;
+    max-height: 100%;
+}
+.poem-detail-poem-body{
+    margin-top: 20px;
+    padding: 5px 0px 20px 5px;
+    width: 100%;
+    min-width: 300px;
+    width: 400px;
+}
+.poem-detail-poem-body p{
+    color: rgb(43, 42, 42);
+    font-size: 15px;
+    margin-bottom: 10px;
+    /* text-indent: 20px; */
+    line-height: 1.8;
+    font-family: gothic, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+

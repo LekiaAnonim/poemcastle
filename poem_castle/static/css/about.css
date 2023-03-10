@@ -1,0 +1,32 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.about-container{
+    padding: 50px 20px;
+}
+
+.about-card{
+    width: 80%;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.about-card h1{
+    color: #000000;
+}
+.about-card p{
+    line-height: 2;
+    color: #494949;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about-me-head{
+    padding-left: 8px;
+    border-left: solid #835EFF;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}

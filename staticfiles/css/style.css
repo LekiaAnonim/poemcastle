@@ -1,0 +1,437 @@
+@font-face {
+    font-family: rubicdirt;
+    src: url('/fonts/RubikDirt-Regular.ttf');
+}
+body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navigation-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%);
+    padding: 8px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+.navigation-bar .socials{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    justify-content: space-between;
+}
+.navigation-bar *{
+    color: #fff;
+}
+.navigation-bar svg{
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.collections-menu{
+    display: flex;
+    align-items: flex-start;
+}
+.nav-menus{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+.hamburger-menu{
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    width: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .equal-bar{
+    width: 20px;
+    height: 3px;
+    border: none;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+.hamburger-menu .unequal-bar{
+    width: 14px;
+    height: 3px;
+    border: none;
+    background-color: #fff;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: all 0.2s;
+}
+.hamburger-menu:hover .equal-bar{
+    width: 14px;
+}
+.hamburger-menu:hover .unequal-bar{
+    width: 20px;
+}
+.hamburger-menu-card{
+    position: fixed;
+    width: 300px;
+    padding: 50px 20px 30px 20px;
+    height: fit-content;
+    right: 0;
+    top: 40px;
+    background-color: #835EFF;
+    z-index: 500;
+    transition: all 0.2;
+}
+.remove-ham-menu-card{
+    display: none;
+}
+.hamburger-menu-card .ham-menu{
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger-menu-card .ham-menu svg{
+    fill: #fff;
+}
+.hamburger-menu-card .ham-menu:hover{
+    background-color: #FF008D;
+}
+.hamburger-menu-card .collections-list{
+    margin-left: 20px;
+    transition: all 0.2s;
+    height: fit-content;
+}
+.display-collection-list{
+    display: none;
+    height: 0;
+}
+.hamburger-menu-card .about{
+    margin-bottom: 30px;
+}
+.hamburger-menu-card .socials{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 130px;
+    justify-content: space-between;
+}
+.cancel-ham-card{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+    width: fit-content;
+    height: fit-content;
+}
+
+.cancel-ham-card svg{
+    width: 30px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+}
+.nav-logo{
+    width: 150px;
+}
+.nav-logo p{
+    font-family: rubicdirt, sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.socials svg{
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.socials svg:hover{
+    transform: translateY(-5px);
+}
+.list-of-collections{
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 30px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: #fff;
+    
+    width: 200px;
+    display: none;
+    z-index: 1000;
+}
+.list-of-collections li{
+    margin-bottom: 7px;
+    color: #835EFF;
+}
+.list-of-collections *{
+    color: black;
+}
+.list-of-collections li a:hover{
+    color: #835EFF;
+}
+li{
+    list-style: none;
+}
+.rotate180{
+    transform: rotate(180deg);
+}
+.display{
+    display: block;
+}
+
+
+/* COLLECTIONS */
+.collections-slider{
+    margin-top: 20px;
+}
+.swiper {
+    padding-bottom: 60px !important;
+    height: 250px;
+  }
+  .swiper .swiper-wrapper {
+    align-items: center;
+  }
+  .swiper .swiper-slide {
+    border-radius: 5px;
+    height: 180px !important;
+    background-image: url('/DALL·E\ 2023-03-08\ 19.50.56\ -\ banner\ poem\ collectors\ searching\ old\ book\ archives.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;
+    transition: 0.2s;
+  }
+  .swiper .swiper-slide.active {
+    height: 230px !important;
+  }
+  .swiper .prev,
+  .swiper .next {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.65;
+    transition: 0.2s;
+  }
+  .swiper .prev:hover,
+  .swiper .next:hover {
+    opacity: 1;
+  }
+  .swiper .prev svg,
+  .swiper .next svg {
+    width: 20px;
+    height: 20px;
+  }
+  .swiper .prev svg path,
+  .swiper .next svg path {
+    fill: #fff;
+  }
+  .swiper .prev {
+    left: 25px;
+  }
+  .swiper .next {
+    right: 25px;
+  }
+  .swiper .pagination {
+    margin-left: 8px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    z-index: 100;
+  }
+  .swiper .pagination span {
+    font-size: 0;
+    opacity: 0.5;
+    margin: 0px 6px !important;
+    border: solid #835EFF;
+    background-color: #835EFF;
+  }
+  .swiper .pagination span.swiper-pagination-bullet-active {
+    background-color: transparent;
+    transform: scale(1.5);
+  }
+
+  /* STYLING POEM CARD */
+  .featured-poems{
+    margin-top: 30px;
+    padding: 20px;
+  }
+  .featured-poems-heading h2{
+    color: gray;
+  }
+  .poem-list-container{
+   margin-top: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .poem-card{
+    width: 320px;
+    min-width: 300px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  .poem-card:hover{
+    background-color: #d8cdff;
+  }
+  .poem-image{
+    width: 30%;
+    height: 100%;
+    margin-right: 7px;
+  }
+  .poem-card img{
+    width: 100%;
+    height: 100%;
+  }
+  .poem-body{
+    width: 70%;
+  }
+  .poem-body .poem-title{
+    font-size: 15px;
+    color: #FF008D;
+  }
+  .poem-date{
+    color: gray;
+    font-size: 12px;
+  }
+  .poem-body-container{
+    margin-top: 10px;
+  }
+  .poem-short-body{
+    color: gray;
+    font-size: 11px;
+    text-overflow: ellipsis;
+  }
+  .poem-collection{
+    font-size: 10px;
+    color: #835EFF;
+  }
+
+
+  /* FOOTER */
+  .footer{
+    position: static;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer .socials{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    justify-content: space-between;
+  }
+  .top-footer{
+    background-color: #835EFF;
+    display: flex;
+    /* align-items: center; */
+    height: 350px;
+    justify-content: space-around;
+    padding: 20px;
+    
+  }
+  .top-footer .capture-text{
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .top-footer svg{
+    fill: #fff;
+  }
+
+  .top-footer .capture-text blockquote{
+    margin-top: 10px;
+    width: 250px;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .top-footer .capture-text *{
+    color: #fff;
+  }
+  .top-footer .capture-image{
+    width: fit-content;
+    max-height: 300px;
+  }
+  .top-footer .capture-image img{
+    width: 100%;
+    max-width: 250px;
+  }
+  .footer-connect-with-us{
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .bottom-footer{
+    background-color: black;
+    padding: 20px;
+    display: flex;
+  }
+  .bottom-footer *{
+    color: #fff;
+  }
+  .logo-text-container{
+    min-width: 300px;
+    width: 100%;
+  }
+  .logo-capture-text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .footer-about a{ 
+    font-size: 14px;
+  }
+  .logo-capture-text blockquote{
+    font-size: 12px;
+  }
+  .list-of-collection-footer{
+    min-width: 300px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .list-of-collection-footer li{
+    font-size: 13px;
+  }
+  .list-of-collection-footer div{
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .poem-detail-aside{
+        float: none;
+        width: 100%;
+    }
+    .hamburger-menu{
+        display: flex;
+    }
+    .nav-menus{
+        display: none;
+    }
+    .navigation-bar .socials{
+        display: none;
+    }
+}
