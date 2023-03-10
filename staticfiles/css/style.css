@@ -6,6 +6,7 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 *{
     padding: 0;
@@ -22,10 +23,19 @@ body{
     padding: 8px 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    right: 0;
+    left: 0;
+    width: 100vw;
     z-index: 10000;
+    margin: 0;
 }
 .navigation-bar .socials{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    justify-content: space-between;
+}
+.poem-detail-share .socials{
     display: flex;
     align-items: center;
     width: 130px;
@@ -194,6 +204,12 @@ li{
 
 
 /* COLLECTIONS */
+.list-of-all-poems{
+  width: fit-content;
+  height: fit-content;
+  margin-top: 60px;
+  margin-left: 20px;
+}
 .collections-slider{
     margin-top: 20px;
 }
@@ -207,7 +223,6 @@ li{
   .swiper .swiper-slide {
     border-radius: 5px;
     height: 180px !important;
-    background-image: url('/DALL·E\ 2023-03-08\ 19.50.56\ -\ banner\ poem\ collectors\ searching\ old\ book\ archives.png');
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid #fff;
@@ -282,7 +297,7 @@ li{
     flex-wrap: wrap;
   }
   .poem-card{
-    width: 320px;
+    max-width: 320px;
     min-width: 300px;
     height: 120px;
     display: flex;
@@ -320,10 +335,17 @@ li{
   .poem-body-container{
     margin-top: 10px;
   }
+  .poem-body-container span{
+    color: gray !important;
+    font-size: 11px !important;
+    text-overflow: ellipsis !important;
+    line-height: 1 !important;
+  }
   .poem-short-body{
-    color: gray;
-    font-size: 11px;
-    text-overflow: ellipsis;
+    color: gray !important;
+    font-size: 11px !important;
+    text-overflow: ellipsis !important;
+    line-height: 1 !important;
   }
   .poem-collection{
     font-size: 10px;
@@ -335,6 +357,8 @@ li{
   .footer{
     position: static;
     bottom: 0;
+    right: 0;
+    left: 0;
     width: 100%;
   }
   .footer .socials{
@@ -350,6 +374,7 @@ li{
     height: 350px;
     justify-content: space-around;
     padding: 20px;
+    width: 100%;
     
   }
   .top-footer .capture-text{
@@ -388,6 +413,7 @@ li{
     background-color: black;
     padding: 20px;
     display: flex;
+    width: 100%;
   }
   .bottom-footer *{
     color: #fff;
@@ -421,10 +447,22 @@ li{
   }
 
   @media only screen and (max-width: 700px) {
+    .poem-detail-container{
+      flex-direction: column;
+      margin-right: 0;
+      padding: 0;
+    }
     .poem-detail-aside{
         float: none;
         width: 100%;
+        padding: 10px;
+        min-width: 100%;
+        max-width: 100%;
     }
+    .poem-detail-card{
+      width: 100%;
+      margin-right: 0;
+  }
     .hamburger-menu{
         display: flex;
     }
@@ -434,4 +472,13 @@ li{
     .navigation-bar .socials{
         display: none;
     }
+    .about-card{
+      width: 95%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-card{
+    width: 100%;
+  }
 }

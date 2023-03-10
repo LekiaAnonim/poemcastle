@@ -41,7 +41,7 @@ body{
     width: 40%;
     height: 90vh;
     background-color: #ffffffb6;
-    /* margin-top: calc(50% - 97%); */
+    margin-top: calc(50% - 97%);
     padding: 30px 20px;
     border-radius: 10px;
     min-width: 300px;

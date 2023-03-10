@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 DATABASES = {
-    "default": dj_database_url.config(default='postgresql://postgres:UMDCxwmgsjhHUJteEsyJ@containers-us-west-153.railway.app:7066/railway', conn_max_age=1800),
+    "default": dj_database_url.config(default='postgresql://postgres:Mt0qQMQsFkGgXoG8GdP7@containers-us-west-164.railway.app:6467/railway', conn_max_age=1800),
 }
 
 CSRF_TRUSTED_ORIGINS = [

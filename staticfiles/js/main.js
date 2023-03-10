@@ -43,7 +43,7 @@ const swiper = new Swiper(".swiper", {
 
 let collectionHamList = document.querySelector('.collections-list');
 function displayCollectionList() {
-    collectionHamList.classList.toggle('display-collection-list');
+  document.querySelector('.collections-list').classList.toggle('display-collection-list');
 }
 
 function removeHamCard() {
