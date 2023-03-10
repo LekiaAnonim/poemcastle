@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 class Collection(models.Model):
     name = models.CharField(max_length=500, null=True, blank=True)
     slug = models.SlugField(null=True,  max_length=500)
-    image = CloudinaryField('image')
+    image = CloudinaryField('image', null=True)
     
     class Meta:
         ordering = ['name']
@@ -31,7 +31,7 @@ class Poem(models.Model):
     slug = models.SlugField(null=True,  max_length=500)
     body = RichTextField()
     date_created = models.DateField(auto_now=True)
-    featured_image = CloudinaryField('image')
+    featured_image = CloudinaryField('image', null=True)
     add_to_featured_poems = models.BooleanField(default=True)
 
     class Meta:
