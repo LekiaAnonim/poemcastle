@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['poemcastle-production.up.railway.app/', 'poemcastle.com']
+ALLOWED_HOSTS = ['poemcastle-production.up.railway.app/', 'poemcastle.com', '127.0.0.1:8000']
 
 
 # Application definition
