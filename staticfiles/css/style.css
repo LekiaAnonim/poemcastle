@@ -6,7 +6,8 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    height: 100%;
 }
 *{
     padding: 0;
@@ -96,7 +97,6 @@ body{
     width: 300px;
     padding: 50px 20px 30px 20px;
     height: fit-content;
-    right: 0;
     top: 40px;
     background-color: #835EFF;
     z-index: 500;
@@ -356,7 +356,7 @@ li{
   /* FOOTER */
   .footer{
     margin-top: 50px;
-    position: absolute;
+    position: absolute !important;
     bottom: 0;
     right: 0;
     left: 0;
@@ -476,10 +476,10 @@ li{
     .about-card{
       width: 95%;
     }
-    .hamburger-menu-card{
+    /* .hamburger-menu-card{
       width: 100%;
       right: 100%;
-  }
+    } */
 }
 
 @media only screen and (max-width: 600px) {
