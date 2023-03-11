@@ -2,10 +2,11 @@
     font-family: gothic;
     src: url('/fonts/CenturyGothic.ttf');
 }
-body{
+/* body{
     width: 100%;
     overflow-x: hidden;
-}
+    wi
+} */
 .poem-detail{
     display: flex;
     justify-content: center;

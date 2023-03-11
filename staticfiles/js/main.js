@@ -7,25 +7,25 @@ function displayDropDown() {
     document.querySelector('.drop-down-icon svg').classList.toggle('rotate180');
 }
 
-const swiper = new Swiper(".swiper", {
-    slidesPerView: 4,
-    spaceBetween: 50,
-    loop: true,
-    grabCursor: true,
-    centeredSlides: true,
-    slideActiveClass: "active",
-    navigation: {
-      nextEl: ".next",
-      prevEl: ".prev"
-    },
-    pagination: {
-      el: ".pagination",
-      clickable: true
-    },
-    autoplay: {
-      enabled: true,
-      delay: 5000
-    },
+// const swiper = new Swiper(".swiper", {
+//     slidesPerView: 4,
+//     spaceBetween: 50,
+//     loop: true,
+//     grabCursor: true,
+//     centeredSlides: true,
+//     slideActiveClass: "active",
+//     navigation: {
+//       nextEl: ".next",
+//       prevEl: ".prev"
+//     },
+//     pagination: {
+//       el: ".pagination",
+//       clickable: true
+//     },
+//     autoplay: {
+//       enabled: true,
+//       delay: 5000
+//     },
     // Media
     // breakpoints: {
     //   // when window width is >= 320px
@@ -39,7 +39,7 @@ const swiper = new Swiper(".swiper", {
     //     spaceBetween: 30
     //   },
     // }
-  });
+  // });
 
 let collectionHamList = document.querySelector('.collections-list');
 function displayCollectionList() {

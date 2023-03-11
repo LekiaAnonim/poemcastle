@@ -2,12 +2,19 @@
     font-family: rubicdirt;
     src: url('/fonts/RubikDirt-Regular.ttf');
 }
+html{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden !important;
+  border: #FF008D solid;
+}
 body{
     width: 100%;
     padding: 0;
     margin: 0;
     overflow-x: hidden !important;
-    height: 100%;
+    /* border: #FF008D solid; */
 }
 *{
     padding: 0;
@@ -356,7 +363,7 @@ li{
   /* FOOTER */
   .footer{
     margin-top: 50px;
-    position: absolute !important;
+    position: relative !important;
     bottom: 0;
     right: 0;
     left: 0;
