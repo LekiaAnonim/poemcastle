@@ -318,7 +318,7 @@ li{
     background-color: #d8cdff;
   }
   .poem-image{
-    width: 30%;
+    width: 35%;
     height: 100%;
     margin-right: 7px;
   }
@@ -336,6 +336,10 @@ li{
   .poem-date{
     color: gray;
     font-size: 11px;
+  }
+  .poem-author{
+    color: rgb(54, 54, 54);
+    font-weight: 500;
   }
   .poem-body-container{
     margin-top: 10px;

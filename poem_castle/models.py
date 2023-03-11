@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 class Collection(models.Model):
     name = models.CharField(max_length=500, null=True, blank=True)
     slug = models.SlugField(null=True,  max_length=500)
-    image = CloudinaryField('image', null=True)
+    # image = CloudinaryField('image', null=True)
     
     class Meta:
         ordering = ['name']
@@ -24,11 +24,20 @@ class Collection(models.Model):
         return reverse('poem_castle:collection_detail',
                        kwargs={'slug': self.slug})
     
+class Author(models.Model):
+    full_name = models.CharField(null=True, blank=True, max_length=500)
+
+    class Meta:
+        ordering = ['full_name']
+
+    def __str__(self):
+        return f"{self.full_name}"
 
 class Poem(models.Model):
     collection = models.ForeignKey(Collection, null=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=500, null=True, blank=True,)
     slug = models.SlugField(null=True,  max_length=500)
+    author = models.ForeignKey(Author, null=True, on_delete=models.SET_NULL)
     body = RichTextField()
     date_created = models.DateField(auto_now=True)
     featured_image = CloudinaryField('image', null=True)

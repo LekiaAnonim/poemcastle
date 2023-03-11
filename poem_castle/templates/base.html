@@ -8,10 +8,16 @@
         {% block title %}
         <title>Poem Castle</title>
         {% endblock title %}
+        {% block stylesheet %}
         <link rel="shortcut icon" href="{% static 'images/castle.ico' %}" type="image/x-icon">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/detail.css' %}">
         <link rel="stylesheet" href="{% static 'css/about.css' %}">
+        {% endblock %}
+        {% block adsense %}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9166266244963766"
+        crossorigin="anonymous"></script>
+        {% endblock %}
     </head>
     <body>
         {% block styles %}
@@ -148,6 +154,7 @@
                     <div class="poem-body">
                         <a href="{{poem.get_absolute_url}}"><h3 class="poem-title">{{poem.title|title}}</h3></a>
                         <p class="poem-date">{{poem.date_created}}</p>
+                        <p class="poem-date poem-author">{{poem.author}}</p>
                         <div class="poem-body-container">
                             <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:10}}</p>
                         </div>

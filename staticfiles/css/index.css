@@ -108,3 +108,10 @@ canvas {
     height: 100vh;
     /* margin-top: calc(50% - 50vh); */
   }
+
+  @media only screen and (max-width: 500px) {
+    .landing-page-card{
+        
+        margin-top: calc(50% - 110%);
+    }
+  }
