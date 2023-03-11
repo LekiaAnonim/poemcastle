@@ -63,6 +63,7 @@
                             <div class="poem-body">
                                 <a href="{{poem_sim.get_absolute_url}}"><h3 class="poem-title">{{poem_sim.title|title}}</h3></a>
                                 <p class="poem-date">{{poem_sim.date_created}}</p>
+                                <p class="poem-date poem-author">{{poem_sim.author}}</p>
                                 <div class="poem-body-container">
                                     <p class="poem-short-body">{{poem_sim.body|safe|escape|truncatewords:10}}</p>
                                 </div>

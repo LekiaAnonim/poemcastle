@@ -25,6 +25,7 @@
                     <div class="poem-body">
                         <a href="{{poem.get_absolute_url}}"><h3 class="poem-title">{{poem.title|title}}</h3></a>
                         <p class="poem-date">{{poem.date_created}}</p>
+                        <p class="poem-date poem-author">{{poem.author}}</p>
                         <div class="poem-body-container">
                             <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:10}}</p>
                         </div>

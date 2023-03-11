@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     padding: 0;
     
 }
@@ -28,7 +28,7 @@
     max-width: 350px;
     /* min-width: 300px; */
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(241, 241, 241);
 }
 .poem-detail-aside .aside-heading{
