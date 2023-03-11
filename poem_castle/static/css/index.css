@@ -50,6 +50,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 100000;
 }
 .landing-page-image{
     display: flex;
