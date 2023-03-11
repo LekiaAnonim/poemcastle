@@ -20,8 +20,8 @@ class AuthorAdmin(admin.ModelAdmin):
 
 @admin.register(Poem)
 class PoemAdmin(admin.ModelAdmin):
-    fields = ('title', 'slug', 'collection', 'featured_image', 'body', 'add_to_featured_poems')
-    list_display = ('title', 'collection', 'featured_image', 'add_to_featured_poems')
-    list_filter = ("title",)
+    fields = ('title', 'slug', 'collection','author', 'featured_image', 'body', 'add_to_featured_poems')
+    list_display = ('title', 'collection', 'author', 'featured_image', 'add_to_featured_poems')
+    list_filter = ("title", 'author')
     search_fields = ("title",)
     prepopulated_fields = {'slug': ('title',)}
