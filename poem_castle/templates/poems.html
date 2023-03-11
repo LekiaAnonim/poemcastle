@@ -26,7 +26,7 @@
                         <a href="{{poem.get_absolute_url}}"><h3 class="poem-title">{{poem.title|title}}</h3></a>
                         <p class="poem-date">{{poem.date_created}}</p>
                         <div class="poem-body-container">
-                            <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:16}}</p>
+                            <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:10}}</p>
                         </div>
                         <a href="{% url 'poem_castle:collection' poem.collection.slug %}"><p class="poem-collection">{{poem.collection}}</p></a>
                     </div>

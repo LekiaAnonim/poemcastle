@@ -304,7 +304,7 @@ li{
   .poem-card{
     max-width: 320px;
     min-width: 300px;
-    height: 120px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -330,25 +330,25 @@ li{
     width: 70%;
   }
   .poem-body .poem-title{
-    font-size: 15px;
+    font-size: 13px;
     color: #FF008D;
   }
   .poem-date{
     color: gray;
-    font-size: 12px;
+    font-size: 11px;
   }
   .poem-body-container{
     margin-top: 10px;
   }
   .poem-body-container span{
     color: gray !important;
-    font-size: 11px !important;
+    font-size: 10.5px !important;
     text-overflow: ellipsis !important;
     line-height: 1 !important;
   }
   .poem-short-body{
     color: gray !important;
-    font-size: 11px !important;
+    font-size: 10.5px !important;
     text-overflow: ellipsis !important;
     line-height: 1 !important;
   }
@@ -425,6 +425,7 @@ li{
     color: #fff;
   }
   .logo-text-container{
+    margin-top: 10px;
     min-width: 300px;
     width: 100%;
   }
@@ -439,6 +440,7 @@ li{
     font-size: 12px;
   }
   .list-of-collection-footer{
+    margin-top: 10px;
     min-width: 300px;
     display: flex;
     justify-content: left;
@@ -490,5 +492,9 @@ li{
 @media only screen and (max-width: 600px) {
   .about-card{
     width: 100%;
+  }
+  .bottom-footer{
+    display: flex;
+    flex-direction: column;
   }
 }
