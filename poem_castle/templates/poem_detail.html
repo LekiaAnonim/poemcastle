@@ -20,7 +20,7 @@
                     </div>
                     <div class="poem-detail-stat">
                         <p>By <span>{{poem.author}}</span></p>
-                        <p>- {{poem.date_created}}</p>
+                        <p>- {{poem.date_created|date:"d M Y"}}</p>
                     </div>
                     <div class="poem-detail-share">
                         <div class="socials">
@@ -54,15 +54,15 @@
                         <h2>In the same collection</h2>
                     </div>
                     <div class="poems-in-the-same-collections">
-                        {% for poem_sim in poems|slice:":10"  %}
-                        {% if poem_sim.collection.name == poem.collection.name %}
+                        {% for poem_sim in poems|slice:"6"  %}
+                        {% if poem_sim.collection.slug == poem.collection.slug %}
                         <div class="poem-card">
                             <div class="poem-image">
                                 <img src="{{poem_sim.featured_image.url}}" alt="">
                             </div>
                             <div class="poem-body">
                                 <a href="{{poem_sim.get_absolute_url}}"><h3 class="poem-title">{{poem_sim.title|title}}</h3></a>
-                                <p class="poem-date">{{poem_sim.date_created}}</p>
+                                <p class="poem-date">{{poem_sim.date_created|date:"D d M Y"}}</p>
                                 <p class="poem-date poem-author">{{poem_sim.author}}</p>
                                 <div class="poem-body-container">
                                     <p class="poem-short-body">{{poem_sim.body|safe|escape|truncatewords:10}}</p>

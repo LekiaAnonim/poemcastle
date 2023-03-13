@@ -17,14 +17,14 @@
             </div>
             <div class="poem-list-container">
                 {% if poems %}
-                {% for poem in poems %}
+                {% for poem in object_list %}
                 <div class="poem-card">
                     <div class="poem-image">
                         <img src="{{poem.featured_image.url}}" alt="">
                     </div>
                     <div class="poem-body">
                         <a href="{{poem.get_absolute_url}}"><h3 class="poem-title">{{poem.title|title}}</h3></a>
-                        <p class="poem-date">{{poem.date_created}}</p>
+                        <p class="poem-date">{{poem.date_created|date:"d M Y"}}</p>
                         <p class="poem-date poem-author">{{poem.author}}</p>
                         <div class="poem-body-container">
                             <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:10}}</p>

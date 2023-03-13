@@ -57,16 +57,21 @@ class CollectionPoemView(ListView):
     
 class PoemListView(ListView):
     model = Poem
-    template_name = "poems.html"
     context_object_name = 'poems'
+    template_name = "poems.html"
+    
     paginate_by = 12
 
-    def get_context_data(self, *args, **kwargs):
+    def get_queryset(self):
+        queryset = super().get_queryset().order_by('-date_created', 'title')
+        return queryset
+
+    def get_context_data(self, **kwargs):
     
         # Call the base implementation first to get the context
+        # context = super().get_context_data(**kwargs)
         context = super(PoemListView, self).get_context_data(**kwargs)
-
-        poems = Poem.objects.all().order_by('-date_created')
+        poems = Poem.objects.all().order_by('-date_created', 'title')
         collections = Collection.objects.all()
         context['collections'] = collections
         context['poems'] = poems

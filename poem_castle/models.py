@@ -39,7 +39,7 @@ class Poem(models.Model):
     slug = models.SlugField(null=True,  max_length=500)
     author = models.ForeignKey(Author, null=True, on_delete=models.SET_NULL)
     body = RichTextField()
-    date_created = models.DateField(auto_now=True)
+    date_created = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', null=True)
     add_to_featured_poems = models.BooleanField(default=True)
 
