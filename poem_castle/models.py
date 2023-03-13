@@ -44,7 +44,7 @@ class Poem(models.Model):
     add_to_featured_poems = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['-date_created']
+        ordering = ['date_created']
 
     def __str__(self):
         return f"{self.title}"

@@ -207,12 +207,40 @@ li{
     display: block;
 }
 
+.need_a_poem{
+  margin-top: 50px;
+  width: 300px;
+  min-width: 280px;
+  margin-left: calc(50% - 150px);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2e9fd;
+}
+.pagination-container{
+  /* background-color: #835EFF; */
+  display: flex;
+  justify-content: center;
+  /* width: fit-content; */
+  padding: 10px;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.pagination-container a{
+  padding: 6px 10px;
+  border: #FF008D solid thin;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.pagination-container .current{
+  background-color: #FF008D;
+  color: #fff;
+}
 
 /* COLLECTIONS */
 .list-of-all-poems{
   width: fit-content;
   height: fit-content;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-left: 20px;
 }
 .collections-slider{

@@ -128,7 +128,11 @@
             </div>
         </header>
         {% endblock  %}
-
+        {% block need_a_poem %}
+        <div class="need_a_poem">
+           <p>Need a poem? Send us an with email with the subject, I need a poem at <a href="mailto:poemcastle@gmail.com">poemcastle@gmail.com</a></p>
+        </div>
+        {% endblock need_a_poem %}
         {% block poem-list %}
         <a href="{% url 'poem_castle:poem_list' %}">
             <div class="list-of-all-poems">
@@ -136,8 +140,6 @@
             </div>
         </a>
         {% endblock %}
-
-        
         
         {% block content %}
         <div class="featured-poems">
@@ -167,6 +169,44 @@
             </div>
         </div>
         {% endblock  %}
+
+        {% block pagination %}
+        {% if is_paginated %}
+        <div class="pagination-container">
+            {% if page_obj.has_previous %}
+                <a href="{{ request.path }}?page=1">
+                    ◀️◀️
+                </a>
+                <a class="previous" href="{{ request.path }}?page={{ page_obj.previous_page_number }}">Previous</a>
+                <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">
+                    ◀️
+                </a>
+            {% endif%}
+
+            <a>{{page_obj.number}} of {{page_obj.paginator.num_pages}}</a>
+
+            {% if page_obj.has_next %}
+                <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">
+                    ▶️
+                </a>
+                <a href="{{ request.path }}?page={{ page_obj.paginator.num_pages }}">
+                    ▶️▶️
+                </a>
+            {% endif%}
+
+            <hr>
+
+            {% for page_number in page_obj.paginator.page_range %}
+                <a
+                    href="{{ request.path }}?page={{ page_number }}"
+                    class="{% if page_number == page_obj.number %}current{% endif %}"
+                >
+                    {{page_number}}
+                </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endblock %}
         
         {% block footer %}
         <div class="footer">

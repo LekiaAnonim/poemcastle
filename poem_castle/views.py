@@ -10,10 +10,12 @@ class LandingPageView(TemplateView):
 
 class MainView(TemplateView):
     template_name = 'base.html'
+    # paginate_by = 12
+    # model = Poem
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        featured_poems = Poem.objects.filter(add_to_featured_poems=True)
+        featured_poems = Poem.objects.filter(add_to_featured_poems=True).order_by('-date_created')
         collections = Collection.objects.all()
         
         context['featured_poems'] = featured_poems
@@ -33,16 +35,17 @@ class AboutView(TemplateView):
 class CollectionPoemView(ListView):
     model = Poem
     template_name = "collection_poem.html"
+    paginate_by = 12
 
     def get_queryset(self):
         collection = get_object_or_404(Collection, slug=self.kwargs.get('slug'))
-        return Poem.objects.filter(collection=collection)
+        return Poem.objects.filter(collection=collection).order_by('-date_created')
 
     def get_context_data(self, *args, **kwargs):
         context = super(CollectionPoemView,
                         self).get_context_data(**kwargs)
         collection = get_object_or_404(Collection, slug=self.kwargs.get('slug'))
-        collection_poems = Poem.objects.filter(collection=collection)
+        collection_poems = Poem.objects.filter(collection=collection).order_by('-date_created')
 
         collections = Collection.objects.all()
         
@@ -55,14 +58,15 @@ class CollectionPoemView(ListView):
 class PoemListView(ListView):
     model = Poem
     template_name = "poems.html"
-
+    context_object_name = 'poems'
+    paginate_by = 12
 
     def get_context_data(self, *args, **kwargs):
     
         # Call the base implementation first to get the context
         context = super(PoemListView, self).get_context_data(**kwargs)
 
-        poems = Poem.objects.all()
+        poems = Poem.objects.all().order_by('-date_created')
         collections = Collection.objects.all()
         context['collections'] = collections
         context['poems'] = poems

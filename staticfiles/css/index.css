@@ -38,10 +38,13 @@ body{
 }
 .landing-page-card{
     max-width: 400px;
+    
     width: 40%;
     height: 90vh;
     background-color: #ffffffb6;
-    margin-top: calc(50% - 97%);
+    /* margin-top: calc(50% - 97%); */
+    position: absolute;
+    top: calc(50% - 45%);
     padding: 30px 20px;
     border-radius: 10px;
     min-width: 300px;
@@ -109,9 +112,9 @@ canvas {
     /* margin-top: calc(50% - 50vh); */
   }
 
-  @media only screen and (max-width: 500px) {
+  /* @media only screen and (max-width: 500px) {
     .landing-page-card{
         
         margin-top: calc(50% - 110%);
     }
-  }
+  } */
