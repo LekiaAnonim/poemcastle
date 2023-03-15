@@ -8,10 +8,13 @@ class LandingPageView(TemplateView):
     template_name = 'index.html'
 
 
-class MainView(TemplateView):
+class MainView(ListView):
     template_name = 'base.html'
-    # paginate_by = 12
-    # model = Poem
+    paginate_by = 12
+    model = Poem
+
+    def get_queryset(self):
+        return Poem.objects.filter(add_to_featured_poems=True).order_by('-date_created')
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)

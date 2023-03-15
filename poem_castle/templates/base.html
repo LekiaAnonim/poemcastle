@@ -9,7 +9,7 @@
         <title>Poem Castle</title>
         {% endblock title %}
         {% block stylesheet %}
-        <link rel="shortcut icon" href="{% static 'images/castle.ico' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static 'images/poemcastle' %}" type="image/x-icon">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/detail.css' %}">
         <link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -41,7 +41,9 @@
         <header>
             <div class="navigation-bar">
                 <div class="nav-logo">
-                    <a href="{% url 'poem_castle:home' %}"><p>Poem Castle</p></a>
+                    <a href="{% url 'poem_castle:home' %}">
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                    </a>
                 </div>
                 <div class="nav-menus">
                     <div class="collections-menu">
@@ -147,8 +149,8 @@
                 <h2>Featured poems</h2>
             </div>
             <div class="poem-list-container">
-                {% if featured_poems %}
-                {% for poem in featured_poems %}
+                {% if object_list %}
+                {% for poem in object_list %}
                 <div class="poem-card">
                     <div class="poem-image">
                         <img src="{{poem.featured_image.url}}" alt="">
@@ -168,12 +170,12 @@
                 
             </div>
         </div>
-        <div class="more-content">
+        <!-- <div class="more-content">
             <a href="{% url 'poem_castle:poem_list' %}"><button>
                 More
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path><path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path></svg>
             </button></a>
-        </div>
+        </div> -->
         {% endblock  %}
 
         {% block pagination %}

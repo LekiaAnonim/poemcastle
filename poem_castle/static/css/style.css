@@ -26,7 +26,7 @@ body{
     align-items: center;
     justify-content: space-around;
     background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%);
-    padding: 8px 0;
+    padding: 0 0;
     position: fixed;
     top: 0;
     right: 0;
@@ -161,6 +161,12 @@ a{
 }
 .nav-logo{
     width: 150px;
+
+}
+.nav-logo img{
+  width: 80px;
+  height: 80px;
+  padding: 0;
 }
 .nav-logo p{
     font-family: rubicdirt, sans-serif;
@@ -179,7 +185,7 @@ a{
     padding: 10px 20px;
     border-radius: 10px;
     position: fixed;
-    top: 30px;
+    top: 50px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     background-color: #fff;
     
@@ -208,7 +214,7 @@ li{
 }
 
 .need_a_poem{
-  margin-top: 50px;
+  margin-top: 100px;
   width: 300px;
   min-width: 280px;
   margin-left: calc(50% - 150px);

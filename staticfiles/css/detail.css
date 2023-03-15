@@ -17,9 +17,10 @@
 }
 .poem-detail-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
     padding: 0;
+    width: 100%;
 }
 .poem-detail-aside{
     float: right;
@@ -71,8 +72,9 @@
 .poem-detail-stat{
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     margin-top: 5px;
-    width: 400%;
+    width: 100%;
     min-width: 300px;
 }
 .poem-detail-stat p{
