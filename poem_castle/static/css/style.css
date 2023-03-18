@@ -77,10 +77,36 @@ body{
     align-items: flex-start;
 }
 .nav-menus{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 200px;
+}
+.search-container{
+  min-width: 200px;
+  width: 40%;
+  height: 40px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #fff;
+}
+.search-container input{
+  height: 30px;
+  width: 100%;
+  background-color: none;
+  border-radius: 15px;
+  padding-left: 15px;
+  border: none;
+  color: #FF008D;
+  /* font-weight: 600;
+  font-size: 16px; */
+}
+.search-container input:focus{
+  border: none;
+  outline: none;
+}
+.navigation-bar .socials{
+  display: none;
 }
 .hamburger-menu{
     align-items: flex-end;
@@ -88,7 +114,7 @@ body{
     flex-direction: column;
     width: 50px;
     cursor: pointer;
-    display: none;
+    display: flex;
 }
 
 .hamburger-menu .equal-bar{

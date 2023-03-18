@@ -92,3 +92,20 @@ class PoemDetail(DetailView):
         context['poems'] = poems
         context['collections'] = collections
         return context
+
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, SearchHeadline
+class SearchResultsList(ListView):
+    model = Poem
+    context_object_name = "poems"
+    template_name = "search.html"
+
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        search_vector = SearchVector("title", "author", "body")
+        search_query = SearchQuery(query)
+
+        search_headline = SearchHeadline("title", search_query)
+        return Poem.objects.annotate(
+            search=search_vector,
+            rank=SearchRank(search_vector, search_query)
+        ).annotate(headline=search_headline).filter(search=search_query).order_by("-rank")

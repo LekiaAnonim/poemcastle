@@ -77,10 +77,13 @@ body{
     align-items: flex-start;
 }
 .nav-menus{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 200px;
+}
+.navigation-bar .socials{
+  display: none;
 }
 .hamburger-menu{
     align-items: flex-end;
@@ -88,7 +91,7 @@ body{
     flex-direction: column;
     width: 50px;
     cursor: pointer;
-    display: none;
+    display: flex;
 }
 
 .hamburger-menu .equal-bar{

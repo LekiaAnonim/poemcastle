@@ -21,4 +21,9 @@ urlpatterns = [
         view=views.PoemListView.as_view(),
         name='poem_list'
     ),
+    path(
+        route='search_results',
+        view=views.SearchResultsList.as_view(),
+        name='search_results'
+    ),
 ]

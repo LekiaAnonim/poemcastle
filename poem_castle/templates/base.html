@@ -45,6 +45,16 @@
                         <img src="{% static 'images/logo.png' %}" alt="">
                     </a>
                 </div>
+                <div class="search-container">
+                    <form action="{% url 'poem_castle:search_results' %}" method="get">
+                        <input
+                          type="search"
+                          name="q"
+                          placeholder="Search poems"
+                          class="form-control"
+                        />
+                    </form>
+                </div>
                 <div class="nav-menus">
                     <div class="collections-menu">
                         <p>Collections</p>

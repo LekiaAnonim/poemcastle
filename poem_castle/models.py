@@ -3,6 +3,8 @@ from django.utils.text import slugify
 from ckeditor.fields import RichTextField
 from django.urls import reverse
 from cloudinary.models import CloudinaryField
+from django.contrib.postgres.search import SearchVectorField
+from django.contrib.postgres.indexes import GinIndex
 
 # Create your models here.
 class Collection(models.Model):
@@ -42,9 +44,13 @@ class Poem(models.Model):
     date_created = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', null=True)
     add_to_featured_poems = models.BooleanField(default=True)
+    search_vector = SearchVectorField(null=True)
 
     class Meta:
         ordering = ['date_created']
+        indexes = [
+            GinIndex(fields=["search_vector"]),
+        ]
 
     def __str__(self):
         return f"{self.title}"

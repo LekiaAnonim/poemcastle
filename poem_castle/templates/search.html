@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'base.html' %}
+    {% load static %}
+    <head>
+        {% block title %}
+            <title>{{poem.title}}</title>
+        {% endblock title %}
+    </head>
+    <body>
+        {% block content %}
+        <h1>Search Results</h1>
+
+        <div class="search-result-container poem-list-container">
+            <br><br>
+
+            {% for poem in poems %}
+            
+            <div class="poem-card">
+                <div class="poem-image">
+                    <img src="{{poem.featured_image.url}}" alt="">
+                </div>
+                <div class="poem-body">
+                    <a href="{{poem.get_absolute_url}}"><h3 class="poem-title">{{poem.headline|title|safe}}</h3></a>
+                    <p class="poem-date">{{poem.date_created|date:"d M Y"}}</p>
+                    <p class="poem-date poem-author">{{poem.author}}</p>
+                    <div class="poem-body-container">
+                        <p class="poem-short-body">{{poem.body|safe|escape|truncatewords:10}}</p>
+                    </div>
+                    <a href="{% url 'poem_castle:collection' poem.collection.slug %}"><p class="poem-collection">{{poem.collection}}</p></a>
+                </div>
+            </div>
+
+            {% empty %}
+            <p>No results found. Try again.</p>
+            {% endfor %}
+
+            
+        </div>
+        
+        {% endblock content %}
+        
+    </body>
+</html>
