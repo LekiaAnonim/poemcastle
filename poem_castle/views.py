@@ -20,9 +20,10 @@ class MainView(ListView):
         context = super().get_context_data(**kwargs)
         featured_poems = Poem.objects.filter(add_to_featured_poems=True).order_by('-date_created')
         collections = Collection.objects.all()
-        
+        poems_count =Poem.objects.all().count()
         context['featured_poems'] = featured_poems
         context['collections'] = collections
+        context['poems_count'] = poems_count
         return context
     
 

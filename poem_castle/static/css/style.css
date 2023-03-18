@@ -264,6 +264,30 @@ li{
   border-radius: 5px;
   background-color: #f2e9fd;
 }
+.all-poems-list-count{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.all-poems-list-count a{
+  display: flex;
+  align-items: center;
+
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+}
+.all-poems-list-count p{
+  color: #835EFF;
+}
+.more-content button:hover{
+  background-color: #FF008D;
+}
+.more-content svg{
+  fill: rgb(255, 255, 255);
+  width: 22px;
+  height: 22px;
+}
 .pagination-container{
   /* background-color: #835EFF; */
   display: flex;
@@ -305,20 +329,16 @@ li{
   align-items: center;
   justify-content: center;
 }
-.more-content button:hover{
-  background-color: #FF008D;
-}
-.more-content svg{
-  fill: rgb(255, 255, 255);
-  width: 22px;
-  height: 22px;
-}
+
 
 /* COLLECTIONS */
 .list-of-all-poems{
+  display: flex;
+  align-items: center;
   width: fit-content;
   height: fit-content;
-  margin-top: 30px;
+  padding: 0;
+  /* margin-top: 30px; */
   margin-left: 20px;
 }
 .collections-slider{
